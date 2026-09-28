@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff8f5">
+  <title>A Little Date Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="heart-drift" aria-hidden="true">
+    <span class="drift-heart drift-heart--one">♥</span>
+    <span class="drift-heart drift-heart--two">♥</span>
+    <span class="drift-heart drift-heart--three">♥</span>
+    <span class="drift-heart drift-heart--four">♥</span>
+    <span class="drift-heart drift-heart--five">♥</span>
+    <span class="drift-heart drift-heart--six">♥</span>
+  </div>
+
+  <main class="page-shell">
+    <section class="envelope-screen" id="envelope-screen" aria-labelledby="envelope-title">
+      <div class="envelope-hearts" aria-hidden="true">
+        <span class="envelope-heart envelope-heart--one">♥</span>
+        <span class="envelope-heart envelope-heart--two">♥</span>
+        <span class="envelope-heart envelope-heart--three">♥</span>
+        <span class="envelope-heart envelope-heart--four">♥</span>
+        <span class="envelope-heart envelope-heart--five">♥</span>
+        <span class="envelope-heart envelope-heart--six">♥</span>
+      </div>
+      <button class="envelope-button" id="envelope-button" type="button" aria-label="Open your special message">
+        <span class="envelope" aria-hidden="true">
+          <span class="envelope__letter"><span>With love,</span><strong>For you ♥</strong></span>
+          <span class="envelope__back"></span>
+          <span class="envelope__front"></span>
+          <span class="envelope__flap"></span>
+          <span class="envelope__seal">♥</span>
+        </span>
+      </button>
+      <h1 id="envelope-title">You have a special message 💌</h1>
+      <p>Click the envelope to open</p>
+    </section>
+
+    <header class="topline">
+      <span class="topline__heart" aria-hidden="true">♥</span>
+      <span>A LITTLE NOTE FOR YOU</span>
+      <span class="topline__heart" aria-hidden="true">♥</span>
+    </header>
+ 
+    <section class="invitation-card" aria-live="polite">
+      <div class="card-sparkle card-sparkle--left" aria-hidden="true">✳</div>
+      <div class="card-sparkle card-sparkle--right" aria-hidden="true">✳</div>
+
+      <section class="screen screen--invite" id="invite-screen" aria-labelledby="invite-title">
+        <div class="love-scene" aria-hidden="true">
+          <div class="scene-heart scene-heart--one">♥</div>
+          <div class="scene-heart scene-heart--two">♥</div>
+          <div class="scene-heart scene-heart--three">♥</div>
+          <div class="scene-heart scene-heart--four">♥</div>
+          <div class="scene-heart scene-heart--five">♥</div>
+          <div class="bear">
+            <div class="bear__ear bear__ear--left"></div>
+            <div class="bear__ear bear__ear--right"></div>
+            <div class="bear__head">
+              <span class="bear__eye bear__eye--left"></span>
+              <span class="bear__eye bear__eye--right"></span>
+              <span class="bear__cheek bear__cheek--left"></span>
+              <span class="bear__cheek bear__cheek--right"></span>
+              <span class="bear__nose"></span>
+              <span class="bear__mouth"></span>
+            </div>
+            <div class="bear__body"></div>
+            <div class="bear__arm bear__arm--left"></div>
+            <div class="bear__arm bear__arm--right"></div>
+            <div class="bear__foot bear__foot--left"></div>
+            <div class="bear__foot bear__foot--right"></div>
+            <div class="bear__heart"><span>I LOVE<br>YOU</span></div>
+          </div>
+        </div>
+        <p class="eyebrow">I have a tiny question...</p>
+        <h1 id="invite-title">Will you go on a date with<br class="desktop-break"> me? <span class="title-heart" aria-hidden="true">❤️</span></h1>
+        <p class="screen-note">Just you, me, and a lovely little plan.</p>
+
+        <div class="choice-row">
+          <button class="button button--yes" id="yes-button" type="button">YES <span aria-hidden="true">♥</span></button>
+          <button class="button button--no" id="no-button" type="button">NO <span aria-hidden="true">😭</span></button>
+        </div>
+        <p class="playful-message" id="no-message" aria-live="polite"></p>
+      </section>
+
+      <section class="screen screen--details" id="details-screen" aria-labelledby="details-title" hidden>
+        <div class="heart-seal heart-seal--small" aria-hidden="true"><span>♥</span></div>
+        <p class="eyebrow">Well, this is exciting</p>
+        <h1 id="details-title">YAY! You said YES! <span aria-hidden="true">♥</span></h1>
+        <p class="screen-note">Let's make a little plan together.</p>
+
+        <form class="date-form" id="dateForm" action="https://formspree.io/f/maenaydq" method="POST">
+          <label class="field">
+            <span class="field__label">📍 Where should we go?</span>
+            <input id="location" name="location" type="text" placeholder="A cozy café, the seaside..." autocomplete="off" required>
+          </label>
+          <div class="field-row">
+            <label class="field">
+              <span class="field__label">📅 What day should we go?</span>
+              <input id="date" name="date" type="date" required>
+            </label>
+            <label class="field">
+              <span class="field__label">⏰ What time should we meet?</span>
+              <input id="time" name="time" type="time" required>
+            </label>
+          </div>
+          <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+          <button class="button button--yes button--wide" type="submit">CONFIRM DATE <span aria-hidden="true">♥</span></button>
+        </form>
+      </section>
+
+      <section class="screen screen--confirmed" id="confirmation-screen" aria-labelledby="confirmation-title" hidden>
+        <div class="heart-seal heart-seal--small" aria-hidden="true"><span>♥</span></div>
+        <p class="eyebrow">Our Date Details</p>
+        <h1 id="confirmation-title"><span aria-hidden="true">♥</span> IT'S A DATE! <span aria-hidden="true">♥</span></h1>
+        <div class="date-summary" aria-label="Your date details">
+          <p><span class="summary-icon" aria-hidden="true">📍</span><span class="summary-label">Location</span><span class="summary-value" id="confirmed-location"></span></p>
+          <p><span class="summary-icon" aria-hidden="true">📅</span><span class="summary-label">Date</span><span class="summary-value" id="confirmed-date"></span></p>
+          <p><span class="summary-icon" aria-hidden="true">⏰</span><span class="summary-label">Time</span><span class="summary-value" id="confirmed-time"></span></p>
+        </div>
+        <p class="love-note">I can't wait to see you! <span aria-hidden="true">♥</span></p>
+        <button class="button button--edit" id="change-details" type="button"><span aria-hidden="true">↶</span> Change Details</button>
+      </section>
+    </section>
+
+    <footer class="page-footer"><span aria-hidden="true">✿</span> Made with a little extra love <span aria-hidden="true">✿</span></footer>
+  </main>
+</body>
+</html>
